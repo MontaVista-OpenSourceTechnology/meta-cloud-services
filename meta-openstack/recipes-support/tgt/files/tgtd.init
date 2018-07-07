@@ -57,11 +57,11 @@ stop ()
     RETVAL=$?
     if [ "$RETVAL" -eq 107 ] ; then
         if [ "$TASK" != "restart" ] ; then
-            exit 1
+            return 1
         fi
     elif [ "$RETVAL" -ne 0 ] ; then
         echo "Some initiators are still connected - could not stop tgtd"
-        exit 2
+        return 2
     fi
     echo -n
 }
