@@ -41,7 +41,7 @@ do_install_append() {
     files="$files ${D}${sysconfdir}/init.d/${BPN}-server"
     for f in $files
     do
-        sed -e "s:\(PGDATA=\).*$:\1${DB_DATADIR}:g" -i $f
+        [ -e $f ] && sed -e "s:\(PGDATA=\).*$:\1${DB_DATADIR}:g" -i $f
     done
 
     # Ensure DB is initialize before we attempt to start the service
