@@ -6,13 +6,11 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=8f0e2cd40e05189ec81232da84bd6e1a"
 
 SRCNAME = "ansible"
 
-SRC_URI = "http://releases.ansible.com/ansible/${SRCNAME}-${PV}.tar.gz"
+SRC_URI = "git://github.com/ansible/ansible.git;protocol=https;branch=stable-2.14"
 
-SRC_URI[md5sum] = "b1be8f05864a07c06b8a767dcd48ba1b"
-SRC_URI[sha256sum] = "cd4b8f53720fcd0c351156b840fdd15ecfbec22c951b5406ec503de49d40b9f5"
+SRCREV = "dcdb718f7a4c03f174030db425eee2a551ab2698"
 
-
-S = "${WORKDIR}/${SRCNAME}-${PV}"
+S = "${WORKDIR}/git"
 
 ANSIBLE_WHITELIST_MODULES ?= "commands files system network/ovs __pycache__ service"
 
