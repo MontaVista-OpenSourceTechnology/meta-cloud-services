@@ -4,8 +4,12 @@ HOMEPAGE = "http://rdoc.info/projects/brianmario/yajl-ruby"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=7dbd3a9f471247a243db5b62fe091587"
 
-SRC_URI = "git://github.com/brianmario/yajl-ruby.git;protocol=https;tag=1.4.0;branch=master"
+SRCREV = "8830754ac1ca04a0c14f71f6e7c1d240934366fe"
+
+SRC_URI = "git://github.com/brianmario/yajl-ruby.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
 
 inherit ruby
+
+FILES:${PN} += "${libdir}/*"
