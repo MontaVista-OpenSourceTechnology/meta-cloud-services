@@ -40,3 +40,4 @@ RDEPENDS:${PN} += " \
         python3-retrying \
         python3-six \
         python3-os-win \
+"
