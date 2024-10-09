@@ -69,7 +69,7 @@ PACKAGECONFIG[tcmalloc] = ",--without-tcmalloc,,"
 
 do_install:append() {
     install -d ${D}${sysconfdir}/init.d
-    install -m 0755 ${WORKDIR}/glusterd.init \
+    install -m 0755 ${UNPACKDIR}/glusterd.init \
         ${D}${sysconfdir}/init.d/glusterd
 
     if ! ${@bb.utils.contains('DISTRO_FEATURES','usrmerge','true','false',d)}; then
@@ -90,7 +90,7 @@ EOF
 
     # Install systemd service files
     install -d ${D}${systemd_system_unitdir}
-    install -m 0644 ${WORKDIR}/glusterd.service ${D}${systemd_system_unitdir}
+    install -m 0644 ${UNPACKDIR}/glusterd.service ${D}${systemd_system_unitdir}
     sed -i -e 's#@SBINDIR@#${sbindir}#g' \
         -e 's#@base_bindir@#${base_bindir}#g' \
         -e 's#@localstatedir@#${localstatedir}#g' \
