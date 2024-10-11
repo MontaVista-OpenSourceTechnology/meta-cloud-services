@@ -6,6 +6,8 @@ Subject: [PATCH] Add gemspec
 Started with an example from here
 http://guides.rubygems.org/make-your-own-gem/
 
+Upstream-Status: Inappropriate [embedded specific]
+
 Signed-off-by: Mark Asselstine <mark.asselstine@windriver.com>
 ---
  puppetlabs-stdlib.gemspec | 12 ++++++++++++

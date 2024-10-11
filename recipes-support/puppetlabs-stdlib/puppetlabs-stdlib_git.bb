@@ -1,17 +1,16 @@
 SUMMARY = "Puppet Labs Standard Library module"
 HOMEPAGE = "https://github.com/puppetlabs/puppetlabs-stdlib"
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=38a048b9d82e713d4e1b2573e370a756"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-PV = "4.10.0"
-SRCREV = "0b4822be3d2242e83c28ab7fed6c5817adc322d5"
+PV = "v9.6.0"
+SRCREV = "99aebdd57d665ac7e2ba38ab95f3fbdbc2fb56e0"
 
 SRC_URI = " \
-    git://github.com/puppetlabs/puppetlabs-stdlib.git;branch=master;protocol=https \
-    file://Add-gemspec.patch \
+    git://github.com/puppetlabs/puppetlabs-stdlib.git;branch=main;protocol=https \
 "
 
-inherit ruby
+inherit rubyv2
 
 S="${WORKDIR}/git"
 
