@@ -1,7 +1,7 @@
 SUMMARY = "Open source Puppet is a configuration management system"
 HOMEPAGE = "https://puppetlabs.com/puppet/puppet-open-source"
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=7c9045ec00cc0d6b6e0e09ee811da4a0"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=72bcf758cb771bfde198d175d9e48429"
 
 SRC_URI = " \
     https://downloads.puppetlabs.com/puppet/puppet-${PV}.tar.gz \
@@ -10,8 +10,8 @@ SRC_URI = " \
     file://puppet.init \
     file://puppet.service \
 "
-SRC_URI[md5sum] = "e26702fbfb464121d8d60e639ea254d9"
-SRC_URI[sha256sum] = "8db3a89c9ced01b43c57f89e42d099a763d02f38bcea5d6c73e1245556932bb2"
+SRC_URI[md5sum] = "82276f0f2547db525af87bf42cf9284f"
+SRC_URI[sha256sum] = "a42c691f460eeccdadb175fa7430aa6e366782b2881af9e4b4c8e6e621d7607d"
 
 inherit ruby update-rc.d systemd
 
@@ -41,14 +41,13 @@ do_install:append() {
     install -d ${D}${sysconfdir}/puppet/manifests
     install -d ${D}${sysconfdir}/puppet/modules
 
-    install -m 655 ${S}/conf/auth.conf ${D}${sysconfdir}/puppet/
     install -m 655 ${S}/conf/fileserver.conf ${D}${sysconfdir}/puppet/
     install -m 655 ${S}/conf/environment.conf ${D}${sysconfdir}/puppet/
-    install -m 655 ${WORKDIR}/puppet.conf ${D}${sysconfdir}/puppet/
+    install -m 655 ${UNPACKDIR}/puppet.conf ${D}${sysconfdir}/puppet/
 
     install -d ${D}${systemd_unitdir}/system
-    install -m 0644 ${WORKDIR}/puppet.service ${D}${systemd_unitdir}/system
+    install -m 0644 ${UNPACKDIR}/puppet.service ${D}${systemd_unitdir}/system
 
     install -d ${D}${sysconfdir}/init.d
-    install -m 0755 ${WORKDIR}/puppet.init ${D}${sysconfdir}/init.d/puppet
+    install -m 0755 ${UNPACKDIR}/puppet.init ${D}${sysconfdir}/init.d/puppet
 }

@@ -1,3 +1,5 @@
+Upstream-Status: Inappropriate [embedded specific]
+
 diff -urN puppet-3.7.3_ori/puppet.gemspec puppet-3.7.3/puppet.gemspec
 --- puppet-3.7.3_ori/puppet.gemspec	1970-01-01 08:00:00.000000000 +0800
 +++ puppet-3.7.3/puppet.gemspec	2014-11-12 14:30:07.000000000 +0800
