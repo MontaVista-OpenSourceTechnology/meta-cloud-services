@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2014 Wind River Systems, Inc.
+# Copyright (c) 2024 Bruce Ashfield, Inc.
 #
 DEPENDS += " \
     ruby-native \
@@ -24,7 +25,7 @@ def get_rubyversion(p):
        return found_version
 
     version = subprocess.Popen([cmd, "--version"], stdout=subprocess.PIPE).communicate()[0]
-    
+
     r = re.compile("ruby ([0-9]+\.[0-9]+\.[0-9]+)*")
     m = r.match(version)
     if m:
@@ -66,7 +67,7 @@ def get_rubygemsversion(p):
        return found_version
 
     version = subprocess.Popen([cmd, "env", "gemdir"], stdout=subprocess.PIPE).communicate()[0]
-    
+
     r = re.compile(".*([0-9]+\.[0-9]+\.[0-9]+)$")
     m = r.match(version.decode("utf-8"))
     if m:
@@ -108,6 +109,11 @@ EOF
 }
 
 ruby_do_compile() {
+	if [ -f ${UNPACKDIR}/extconf.rb ]; then
+		cp extconf.rb extconf.orig
+		cp ${UNPACKDIR}/extconf.rb extconf.rb
+	fi
+
 	if [ -f extconf.rb -a ! -f extconf.rb.orig ] ; then
 		grep create_makefile extconf.rb > append2 || (exit 0)
 		ruby_gen_extconf_fix
@@ -164,3 +170,20 @@ FILES:${PN} += " \
 FILES:${PN}-doc += " \
         ${libdir}/ruby/gems/${RUBY_GEM_VERSION}/doc \
         "
+
+# copied from rubyv2.bbclass
+
+# the ruby dynamic linker just uses plain .so files
+# so we have to supply symlinks as part of the base package
+INSANE_SKIP:${PN} += "dev-so"
+# sadly the shared objects also contain some hard coded
+# host paths, which are not easy to be removed
+INSANE_SKIP:${PN} += "buildpaths"
+# we don't care what is actually needed for the dev-package
+INSANE_SKIP:${PN}-dev += "file-rdeps"
+# same issue for the dev package with buildpaths
+INSANE_SKIP:${PN}-dev += "buildpaths"
+# some of the doc utils contain host specific full paths
+# as they are mostly in binary format we are just going to
+# ignore it here
+INSANE_SKIP:${PN}-doc += "buildpaths"
