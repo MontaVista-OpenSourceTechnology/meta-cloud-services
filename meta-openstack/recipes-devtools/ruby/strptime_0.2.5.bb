@@ -12,6 +12,9 @@ S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} = "bash"
 
-inherit ruby
+inherit rubyv2
+
+GEM_NAME = "strptime"
+GEM_SPEC_FILE = "strptime.gemspec"
 
 FILES:${PN} += "${libdir}/*"
