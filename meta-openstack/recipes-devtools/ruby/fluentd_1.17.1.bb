@@ -3,7 +3,7 @@ HOMEPAGE = "https://www.fluentd.org/"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1ffc336af228834e68e0a4d38da165f7"
 
-SRCREV = "9d113029d4550ce576d8825bfa9612aa3e55bff0"
+SRCREV = "b4814cb672f8d0fef2bf441214aae368a4091662"
 
 SRC_URI = "git://github.com/fluent/fluentd.git;protocol=https;branch=master"
 

@@ -10,6 +10,9 @@ SRC_URI = "git://github.com/brianmario/yajl-ruby.git;protocol=https;branch=maste
 
 S = "${WORKDIR}/git"
 
-inherit ruby
+inherit rubyv2
+
+GEM_NAME = "yajl-ruby"
+GEM_SPEC_FILE = "yajl-ruby.gemspec"
 
 FILES:${PN} += "${libdir}/*"
