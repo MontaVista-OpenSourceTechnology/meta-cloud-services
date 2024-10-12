@@ -108,6 +108,20 @@ EOF
 EOF
 }
 
+do_generate_spec () {
+    if [ -z "${GEM_SPEC_FILE}" ]; then
+	return 0
+    fi
+
+    if [ -e "${UNPACKDIR}/${GEM_SPEC_FILE}" ]; then
+	cp -f "${UNPACKDIR}/${GEM_SPEC_FILE}" "${S}/${GEM_SPEC_FILE}"
+	return 0
+    fi
+}
+
+do_generate_spec[vardepsexclude] += "prefix_native"
+addtask do_generate_spec before do_patch
+
 ruby_do_compile() {
 	if [ -f ${UNPACKDIR}/extconf.rb ]; then
 		cp extconf.rb extconf.orig
