@@ -121,6 +121,11 @@ do_generate_spec() {
     export RUBYLIB=${RUBYLIB}
     export GEM_SPEC=${GEM_SPEC_CACHE}
 
+    if [ -e "${UNPACKDIR}/${GEM_SPEC_FILE}" ]; then
+	cp -f "${UNPACKDIR}/${GEM_SPEC_FILE}" "${S}/${GEM_SPEC_FILE}"
+	return 0
+    fi
+
     # GEM_FILE might not exist if SRC_URI was overloaded
     [ ! -e ${GEM_FILE} ] && return 0
 
