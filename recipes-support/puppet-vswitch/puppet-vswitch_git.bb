@@ -3,15 +3,18 @@ HOMEPAGE = "https://github.com/openstack/puppet-vswitch"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1dece7821bf3fd70fe1309eaa37d52a2"
 
-PV = "3.0.0"
-SRCREV = "c374840910c823f7669cf2e1229c7df7192ae880"
+PV = "21.1.0"
+SRCREV = "43ee6e8d174c2748376f5e166a25c7143747b3b9"
 
 SRC_URI = " \
     git://github.com/openstack/puppet-vswitch.git;branch=master;protocol=https \
-    file://Add-gemspec.patch \
+    file://puppet-vswitch.gemspec \
 "
 
-inherit ruby
+inherit rubyv2
+
+GEM_NAME = "puppetlabs-std"
+GEM_SPEC_FILE = "puppet-vswitch.gemspec"
 
 S="${WORKDIR}/git"
 
