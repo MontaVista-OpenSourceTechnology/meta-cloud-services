@@ -6,9 +6,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=1ebbd3e34237af26da5dc08a4e440464"
 
 SRCNAME = "ansible"
 
-SRC_URI = "git://github.com/ansible/ansible.git;protocol=https;branch=stable-2.16"
+SRC_URI = "git://github.com/ansible/ansible.git;protocol=https;branch=stable-2.17"
 
-SRCREV = "ee04df4796af1a438bc80aff33cdd5ca4d5304aa"
+SRCREV = "05e01efa8534d19956133e19e9e84aad720abb0d"
 
 S = "${WORKDIR}/git"
 
