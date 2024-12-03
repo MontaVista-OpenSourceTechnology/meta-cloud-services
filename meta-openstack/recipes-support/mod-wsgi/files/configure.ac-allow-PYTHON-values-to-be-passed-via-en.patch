@@ -9,14 +9,14 @@ issues.
 
 Updated for 4.9.0: Jeremy Puhlman
 
+Upstream-Status: Pending
 Signed-off-by: Mark Asselstine <mark.asselstine@windriver.com>
-----
- configure.ac | 41 +++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 41 insertions(+)
-
+---
+ configure.ac | 40 ++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 40 insertions(+)
 
 diff --git a/configure.ac b/configure.ac
-index 37a0f86..9b77c7f 100644
+index f994dd7..8774010 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -106,26 +106,38 @@ fi
@@ -58,7 +58,7 @@ index 37a0f86..9b77c7f 100644
  
  if test "${ENABLE_EMBEDDED}" != "yes"; then
  CPPFLAGS3="-DMOD_WSGI_DISABLE_EMBEDDED"
-@@ -137,22 +149,42 @@ CPPFLAGS="${CPPFLAGS} ${CPPFLAGS1} ${CPPFLAGS2} ${CPPFLAGS3}"
+@@ -137,21 +149,41 @@ CPPFLAGS="${CPPFLAGS} ${CPPFLAGS1} ${CPPFLAGS2} ${CPPFLAGS3}"
  
  AC_SUBST(CPPFLAGS)
  
@@ -71,9 +71,8 @@ index 37a0f86..9b77c7f 100644
 +fi
 +if test -z "${PYTHON_CFGDIR}"; then
  PYTHONCFGDIR=`${PYTHON} -c 'from sys import stdout; \
-     import distutils.sysconfig; \
-     stdout.write(distutils.sysconfig.get_python_lib(plat_specific=1, \
-     standard_lib=1) +"/config")'`
+     import sysconfig; \
+     stdout.write(sysconfig.get_path("platstdlib") +"/config")'`
 +else
 +PYTHONCFGDIR="${PYTHON_CFGDIR}"
 +fi
@@ -101,7 +100,7 @@ index 37a0f86..9b77c7f 100644
  
  if test "${PYTHON_LDVERSION}" != "${PYTHON_VERSION}"; then
      PYTHONCFGDIR="${PYTHONCFGDIR}-${PYTHON_LDVERSION}"
-@@ -180,12 +212,20 @@ if test "${PYTHONFRAMEWORKDIR}" = "no-framework" -o \
+@@ -179,12 +211,20 @@ if test "${PYTHONFRAMEWORKDIR}" = "no-framework" -o \
          LDLIBS1="-lpython${PYTHON_VERSION}"
      fi
  
@@ -122,3 +121,6 @@ index 37a0f86..9b77c7f 100644
  else
      LDFLAGS1="-Wl,-F${PYTHONFRAMEWORKPREFIX} -framework ${PYTHONFRAMEWORK}"
  
+-- 
+2.25.1
+
