@@ -45,6 +45,10 @@ FILES:${PN} += " \
     ${systemd_unitdir}/system-generators/ibft-rule-generator \
 "
 
+do_configure() {
+    cd ${S}/iscsiuio; autoreconf --install
+}
+
 do_install() {
     oe_runmake install DESTDIR=${D} prefix=${exec_prefix} LIBDIR=${libdir} sbindir=${sbindir} SBINDIR=${sbindir} systemddir=${systemd_unitdir}
 }
