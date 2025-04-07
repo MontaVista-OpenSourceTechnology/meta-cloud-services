@@ -3,6 +3,7 @@ From: Lei Maohui <leimaohui@fujitsu.com>
 Date: Fri, 20 May 2022 17:59:03 +0900
 Subject: [PATCH] Modified path of systemd service from /usr/lib to /lib.
 
+Upstream-Status: Pending
 Signed-off-by: Lei Maohui <leimaohui@fujitsu.com>
 ---
  etc/Makefile | 2 +-

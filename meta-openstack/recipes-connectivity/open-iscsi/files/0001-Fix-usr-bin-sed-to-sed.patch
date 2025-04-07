@@ -3,6 +3,7 @@ From: Lei Maohui <leimaohui@fujitsu.com>
 Date: Wed, 18 May 2022 11:32:29 +0900
 Subject: [PATCH] Fix /usr/bin/sed to sed.
 
+Upstream-Status: Pending
 Signed-off-by: Lei Maohui <leimaohui@fujitsu.com>
 ---
  doc/Makefile   | 2 +-

@@ -7,6 +7,7 @@ The error likes as following
 | configure: error: cannot run C compiled programs.
 | If you meant to cross compile, use `--host'.
 
+Upstream-Status: Pending
 Signed-off-by: Lei Maohui <leimaohui@fujitsu.com>
 ---
  Makefile | 2 +-
