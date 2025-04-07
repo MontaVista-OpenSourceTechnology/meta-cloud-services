@@ -1,0 +1,32 @@
+From 5a16752432b486b8e1d299142723ded284b81984 Mon Sep 17 00:00:00 2001
+From: Lei Maohui <leimaohui@fujitsu.com>
+Date: Mon, 7 Apr 2025 06:47:46 +0000
+Subject: [PATCH] Fix the calloc-transposed-args issue
+
+| fwparam_ppc.c:349:45: error: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Werror=calloc-transposed-args]
+|   349 |                         dev = calloc(sizeof(struct ofw_dev), 1);
+|       |                                             ^~~~~~
+| fwparam_ppc.c:349:45: note: earlier argument should specify number of elements, later size of each element
+
+Upstream-Status: Submitted [https://github.com/open-iscsi/open-iscsi/pull/504]
+Signed-off-by: Lei Maohui <leimaohui@fujitsu.com>
+---
+ usr/fwparam_ibft/fwparam_ppc.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/usr/fwparam_ibft/fwparam_ppc.c b/usr/fwparam_ibft/fwparam_ppc.c
+index 7013d6c..74df13d 100644
+--- a/usr/fwparam_ibft/fwparam_ppc.c
++++ b/usr/fwparam_ibft/fwparam_ppc.c
+@@ -346,7 +346,7 @@ static int find_initiator(const char *fpath,
+ 				      "/aliases/iscsi-disk"))) {
+ 
+ 		if (dev_count < OFWDEV_MAX) {
+-			dev = calloc(sizeof(struct ofw_dev), 1);
++			dev = calloc(1, sizeof(struct ofw_dev));
+ 			if (!dev)
+ 				return -ENOMEM;
+ 
+-- 
+2.43.0
+

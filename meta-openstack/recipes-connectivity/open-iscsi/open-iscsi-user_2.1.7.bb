@@ -13,6 +13,7 @@ SRC_URI = "git://github.com/open-iscsi/open-iscsi.git;protocol=https;branch=mast
            file://0001-Makefile-Fix-build-error-of-cross-build.patch \
            file://0001-Fix-usr-bin-sed-to-sed.patch \
            file://0001-Modified-path-of-systemd-service-from-usr-lib-to-lib.patch \
+           file://0001-Fix-the-calloc-transposed-args-issue.patch \
            "
 
 SRCREV = "7b53fcc502da8617110fd64d675b476772c28a6f"
