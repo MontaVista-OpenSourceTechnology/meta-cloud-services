@@ -8,7 +8,7 @@ SRCNAME = "ansible"
 
 SRC_URI = "git://github.com/ansible/ansible.git;protocol=https;branch=stable-2.17"
 
-SRCREV = "05e01efa8534d19956133e19e9e84aad720abb0d"
+SRCREV = "dc0e3bd16cc7ded081bc46c88e4e3d1997ca9bb0"
 
 S = "${WORKDIR}/git"
 
