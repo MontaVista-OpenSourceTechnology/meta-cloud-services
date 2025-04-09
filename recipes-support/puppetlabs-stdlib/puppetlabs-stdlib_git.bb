@@ -16,7 +16,7 @@ inherit rubyv2
 GEM_NAME = "puppetlabs-std"
 GEM_SPEC_FILE = "puppetlabs-stdlib.gemspec"
 
-S="${WORKDIR}/git"
+S = "${WORKDIR}/git"
 
 DEPENDS += " \
         ruby \
