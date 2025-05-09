@@ -28,6 +28,7 @@ SRC_URI[md5sum] = "cc30ee0ab91d6c94b7a343ae09b5dc69"
 SRC_URI[sha256sum] = "c6d661e74693cbf531a790631ca93b73f291fb23cc39465b09deb8da2bfb0e14"
 
 DEPENDS += "libpam openldap krb5"
+EXTRA_OEMAKE += "CC='${CC} -std=c99 '"
 
 EXTRA_OECONF = "\
 	--disable-pynslcd \
