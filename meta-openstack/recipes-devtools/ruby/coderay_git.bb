@@ -13,8 +13,6 @@ BPV = "1.1.0"
 PV = "${BPV}"
 SRCREV = "a48037b85a12228431b32103786456f36beb355f"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/rubychan/coderay.git;branch=master;protocol=https \
     "

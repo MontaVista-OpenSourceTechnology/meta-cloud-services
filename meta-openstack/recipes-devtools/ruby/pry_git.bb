@@ -15,8 +15,6 @@ BPV = "0.10.1"
 PV = "${BPV}"
 SRCREV = "191dc519813402acd6db0d7f73e652ed61f8111f"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/pry/pry.git;branch=master;protocol=https \
     file://rdoc-fixup-opt.banner-heredoc.patch \

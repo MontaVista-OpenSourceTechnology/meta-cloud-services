@@ -10,8 +10,6 @@ SRC_URI = "git://${GO_IMPORT}.git;branch=main;protocol=https \
            file://consul.service \
           "
 
-S = "${WORKDIR}/git"
-
 RDEPENDS:${PN}-dev:append = " bash"
 
 # Temporarily workaround an issue with GO 1.12.1

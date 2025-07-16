@@ -10,8 +10,6 @@ SRCREV = "7355d905bc0e6b7d8884e290cc26895eed0f7179"
 SRCNAME = "oslo.middleware"
 SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol=https"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3
 
 # DEPENDS_default: python3-pip
@@ -24,7 +22,6 @@ DEPENDS += " \
 DEPENDS += " \
         python3-pbr-native \
         "
-
 
 # RDEPENDS:default: 
 RDEPENDS:${PN} += " \

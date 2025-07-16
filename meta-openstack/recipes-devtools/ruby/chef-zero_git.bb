@@ -18,8 +18,6 @@ BPV = "4.2.3"
 PV = "${BPV}"
 SRCREV = "28fe2928469885b0138de4d4270c6eccac8ab482"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/opscode/chef-zero.git;branch=master;protocol=https \
     "

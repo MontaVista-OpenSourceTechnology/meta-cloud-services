@@ -24,12 +24,11 @@ SRC_URI = "https://files.pythonhosted.org/packages/source/s/${BPN}/${BPN}-${PV}.
 SRC_URI[md5sum] = "4174a6dd2c7eee808086ca06bdd928c9"
 SRC_URI[sha256sum] = "e9ebb4d92fae8dabf21b8749dc126e4a4048bf8f613f5b1b851fe4b8226b5abc"
 
-
 SYSTEMD_AUTO_ENABLE:${PN}-master = "disable"
 SYSTEMD_AUTO_ENABLE:${PN}-minion = "disable"
 SYSTEMD_AUTO_ENABLE:${PN}-api = "disable"
 
-S = "${WORKDIR}/${PN}-${PV}"
+S = "${UNPACKDIR}/${PN}-${PV}"
 
 inherit setuptools3 systemd
 
@@ -124,7 +123,6 @@ RSUGGESTS:${PN}-api = "python3-cherrypy"
 CONFFILES:${PN}-api = "${sysconfdir}/init.d/${PN}-api"
 FILES:${PN}-api = "${bindir}/${PN}-api ${CONFFILES_${PN}-api} ${systemd_system_unitdir}/${PN}-api.service"
 
-
 SUMMARY:${PN}-master = "remote manager to administer servers via salt"
 DESCRIPTION:${PN}-master ="${DESCRIPTION_COMMON} This particular package provides the salt controller."
 RDEPENDS:${PN}-master = "${PN}-common (= ${EXTENDPKGV}) python3-msgpack python3-pycryptodomex (>= 3.9.7)"
@@ -133,7 +131,6 @@ RDEPENDS:${PN}-master += "${@bb.utils.contains('PACKAGECONFIG', 'tcp', 'python3-
 CONFFILES:${PN}-master="${sysconfdir}/init.d/${PN}-master  ${sysconfdir}/${PN}/master"
 RSUGGESTS:${PN}-master = "python3-git"
 FILES:${PN}-master = "${bindir}/${PN} ${bindir}/${PN}-cp ${bindir}/${PN}-key ${bindir}/${PN}-master ${bindir}/${PN}-run ${bindir}/${PN}-unity ${bindir}/spm ${CONFFILES_${PN}-master} ${systemd_system_unitdir}/${PN}-master.service"
-
 
 SUMMARY:${PN}-syndic = "master-of-masters for salt, the distributed remote execution system"
 DESCRIPTION:${PN}-syndic = "${DESCRIPTION_COMMON} This particular package provides the master of masters for \

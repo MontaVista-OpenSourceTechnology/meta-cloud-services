@@ -10,8 +10,6 @@ SRCREV = "2402013a8719873d65136fc283e1855166adbc26"
 SRCNAME = "pycadf"
 SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=https"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3
 
 FILES:${PN} += "${datadir}/etc/${SRCNAME}/*"

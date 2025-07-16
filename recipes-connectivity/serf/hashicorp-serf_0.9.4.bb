@@ -22,8 +22,6 @@ SRC_URI = "git://${GO_IMPORT}.git;protocol=https;branch=master"
 PV = "0.8.5+git${SRCPV}"
 SRCREV = "1d3fdf93bbe5002c5023da50402368a817488691"
 
-S = "${WORKDIR}/git"
-
 inherit go
 
 RDEPENDS:${PN}-dev += "bash make"

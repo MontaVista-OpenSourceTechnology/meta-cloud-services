@@ -15,8 +15,6 @@ BPV = "2.9.1"
 PV = "${BPV}"
 SRCREV = "9f8607984d8e904f211cc5edb39ab2a2ca94008e"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/net-ssh/net-ssh.git;branch=master;protocol=https \
     file://gemspec-don-t-force-the-use-of-gem-private_key.pem.patch \

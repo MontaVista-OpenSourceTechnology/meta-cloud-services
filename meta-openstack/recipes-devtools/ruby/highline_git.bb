@@ -19,8 +19,6 @@ BPV = "1.7.3"
 PV = "${BPV}"
 SRCREV = "327051c1c217df2880c3a53f31484f7e815e847f"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/JEG2/highline.git;branch=master;protocol=https \
     "

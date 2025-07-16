@@ -10,8 +10,6 @@ SRC_URI = "git://github.com/ansible/ansible.git;protocol=https;branch=stable-2.1
 
 SRCREV = "dc0e3bd16cc7ded081bc46c88e4e3d1997ca9bb0"
 
-S = "${WORKDIR}/git"
-
 ANSIBLE_WHITELIST_MODULES ?= "commands files system network/ovs __pycache__ service"
 
 do_install:append() {

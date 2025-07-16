@@ -14,8 +14,6 @@ BPV = "2.5.2"
 PV = "${BPV}"
 SRCREV = "cb253a8bf213beea69f27418202e936a22d7308f"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/ahoward/systemu.git;branch=master;protocol=https \
     "

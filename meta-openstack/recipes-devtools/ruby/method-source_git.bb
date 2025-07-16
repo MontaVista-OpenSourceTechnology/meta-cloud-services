@@ -13,8 +13,6 @@ BPV = "0.8.2"
 PV = "${BPV}"
 SRCREV = "1b1f8323a7c25f29331fe32511f50697e5405dbd"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/banister/method_source.git;branch=master;protocol=https \
     file://gemspec-bump-version.patch \

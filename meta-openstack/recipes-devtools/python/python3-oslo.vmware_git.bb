@@ -10,8 +10,6 @@ SRCREV = "32c8d43a20cb6a29f03324fbc2e6cad3bfb5a294"
 SRCNAME = "oslo.vmware"
 SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=https"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3
 
 DEPENDS += " \

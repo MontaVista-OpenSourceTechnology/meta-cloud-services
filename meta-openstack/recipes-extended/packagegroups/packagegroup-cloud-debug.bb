@@ -10,4 +10,3 @@ RDEPENDS:${PN} = " \
     packagegroup-core-tools-debug \
     "
 
-

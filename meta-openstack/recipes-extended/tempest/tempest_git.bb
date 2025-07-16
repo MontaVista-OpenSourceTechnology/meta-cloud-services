@@ -16,7 +16,6 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=http
 
 SRCREV="2707a0f065e52d8331d12c983ead95de1224cb32"
 PV="2014.1+git${SRCPV}"
-S = "${WORKDIR}/git"
 
 SERVICECREATE_PACKAGES = "${SRCNAME}-setup ${SRCNAME}-setup-altdemo ${SRCNAME}-setup-admin"
 KEYSTONE_HOST="${CONTROLLER_IP}"

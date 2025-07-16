@@ -24,8 +24,6 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol
 SRCREV = "d07677aba54362a4a3aa2d165b155105ffe30d73"
 PV = "12.0.0+git${SRCPV}"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3 identity hosts default_configs monitor useradd systemd
 
 SERVICE_TOKEN = "password"

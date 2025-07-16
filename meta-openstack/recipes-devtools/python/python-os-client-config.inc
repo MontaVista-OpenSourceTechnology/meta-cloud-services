@@ -10,8 +10,6 @@ SRCREV = "261c05f0057d556a8910457f1e22ca4d81801081"
 SRCNAME = "os-client-config"
 SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol=https"
 
-S = "${WORKDIR}/git"
-
 DEPENDS += " \
         ${PYTHON_PN}-pbr \
         "

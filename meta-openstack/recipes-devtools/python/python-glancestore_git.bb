@@ -11,8 +11,6 @@ SRC_URI = "\
 	git://github.com/openstack/glance_store.git;branch=master;protocol=https \
 	"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3
 
 DEPENDS += " \

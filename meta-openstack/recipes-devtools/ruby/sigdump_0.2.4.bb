@@ -8,8 +8,6 @@ SRCREV = "57570f04456560512e4efc1c6fa695b76c17dc0d"
 
 SRC_URI = "git://github.com/frsyuki/sigdump.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 inherit ruby
 
 FILES:${PN} += "${libdir}/*"

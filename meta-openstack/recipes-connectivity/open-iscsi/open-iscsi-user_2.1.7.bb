@@ -18,7 +18,6 @@ SRC_URI = "git://github.com/open-iscsi/open-iscsi.git;protocol=https;branch=mast
 
 SRCREV = "7b53fcc502da8617110fd64d675b476772c28a6f"
 
-S = "${WORKDIR}/git"
 B = "${S}"
 
 PARALLEL_MAKEINST = ""

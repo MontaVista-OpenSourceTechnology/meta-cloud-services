@@ -9,7 +9,6 @@ SRC_URI = "git://github.com/openstack/python-glanceclient.git;branch=master;prot
 
 PV = "2.17.0+git${SRCPV}"
 SRCREV = "40c19aa44361e13ac997d325d357d3e4748fa063"
-S = "${WORKDIR}/git"
 
 DEPENDS += " \
         gmp \

@@ -14,8 +14,6 @@ BPV = "1.5.0"
 PV = "${BPV}"
 SRCREV = "b3b3c12141b5380ec61945770690fc1ae31d92b0"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/opscode/mixlib-cli.git;branch=master;protocol=https \
     "

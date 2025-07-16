@@ -13,8 +13,6 @@ BPV = "4.2.0"
 PV = "${BPV}"
 SRCREV = "50c4d5a6553c9d0b78dee35a092ea3a40c136fa1"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/leejarvis/slop.git;branch=master;protocol=https \
     "

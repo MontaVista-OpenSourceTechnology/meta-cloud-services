@@ -7,8 +7,6 @@ SRCREV = "b4814cb672f8d0fef2bf441214aae368a4091662"
 
 SRC_URI = "git://github.com/fluent/fluentd.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 RDEPENDS:${PN} = "cool.io http-parser.rb msgpack serverengine sigdump strptime tzinfo tzinfo-data yajl-ruby"
 
 inherit ruby

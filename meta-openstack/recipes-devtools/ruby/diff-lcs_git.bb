@@ -17,8 +17,6 @@ PV = "${BPV}"
 #SRCREV = "d53e92242b9dd6745e56a0ff4ba15d2f62052b91"
 SRCREV = "704bc2c0000b5f9bf49d607dcd0d3989b63b2595"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/halostatue/diff-lcs.git;branch=master;protocol=https \
     "

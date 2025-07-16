@@ -16,8 +16,6 @@ BPV = "2.5"
 PV = "${BPV}"
 SRCREV = "bc15d62118b59aabbc9cb6e5734b65bf3bc273f0"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/halostatue/mime-types.git;branch=master;protocol=https \
     "

@@ -11,8 +11,6 @@ SRC_URI = "git://github.com/saltstack/salt-testing.git;branch=develop;protocol=h
 SRCREV = "8d21627a4eef316d22cc424deeca16a0ec8472e9"
 PV = "2018.9.21+git${SRCPV}"
 
-S = "${WORKDIR}/git"
-
 RDEPENDS:${PN} = "\
                   python3-mock \
                   python3-unittest \

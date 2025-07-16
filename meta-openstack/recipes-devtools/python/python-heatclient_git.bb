@@ -31,10 +31,8 @@ SRC_URI = "git://github.com/openstack/python-heatclient.git;branch=master;protoc
 
 PV = "1.17.0+git${SRCPV}"
 SRCREV = "8af5deb458d51f4ec16e769d7fd6c94655f82f5f"
-S = "${WORKDIR}/git"
 
 inherit setuptools3
-
 
 PACKAGECONFIG ?= "bash-completion"
 PACKAGECONFIG[bash-completion] = ",,bash-completion,bash-completion ${BPN}-bash-completion"

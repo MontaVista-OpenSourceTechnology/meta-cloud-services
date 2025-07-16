@@ -30,8 +30,6 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol
 SRCREV = "7fd30cb652fb5d516b4c1f5415f18f54d7a40c2a"
 PV = "11.0.2+git${SRCPV}"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3 systemd useradd identity hosts default_configs monitor
 
 USER = "neutron"
@@ -105,7 +103,6 @@ do_install:append() {
     
     sed -e "/^#connection = .*/aconnection = postgresql+psycopg2://${DB_USER}:${DB_PASSWORD}@localhost/neutron" \
             -i ${CONF_FILE}
-
 
     # ml2_conf.ini changes (replace with .ini file editing)
     CONF_FILE=${NEUTRON_CONF_DIR}/plugins/ml2/ml2_conf.ini
@@ -261,7 +258,6 @@ FILES:${PN} = "${libdir}/*"
 
 FILES:${SRCNAME}-tests = "${sysconfdir}/${SRCNAME}/run_tests.sh"
 RDEPENDS:${SRCNAME}-tests += " bash"
-
 
 FILES:${SRCNAME} = " \
     ${bindir}/neutron-db-manage \
@@ -428,7 +424,6 @@ SYSTEMD_AUTO_ENABLE:${SRCNAME}-server = "disable"
 SYSTEMD_AUTO_ENABLE:${SRCNAME}-dhcp-agent = "disable"
 SYSTEMD_AUTO_ENABLE:${SRCNAME}-linuxbridge-agent = "disable"
 SYSTEMD_AUTO_ENABLE:${SRCNAME}-metadata-agent = "disable"
-
 
 MONITOR_SERVICE_PACKAGES = "${SRCNAME}"
 MONITOR_SERVICE_${SRCNAME} = "neutron"

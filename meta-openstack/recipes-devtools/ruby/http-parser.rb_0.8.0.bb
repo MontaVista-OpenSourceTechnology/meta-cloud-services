@@ -8,8 +8,6 @@ SRCREV = "71ecce2a498f87ba83ea3d77322a001132610a6e"
 
 SRC_URI = "gitsm://github.com/tmm1/http_parser.rb.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 # Bitbake doesn't allow the underscore in file name, hence the dash
 SRCNAME = "http_parser.rb"
 

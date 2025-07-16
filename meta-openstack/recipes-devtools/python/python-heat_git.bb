@@ -17,7 +17,6 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=http
 
 SRCREV = "4348b7ababd1048e17ec354ca38c903c908cd74e"
 PV = "5.0.0+git${SRCPV}"
-S = "${WORKDIR}/git"
 
 SERVICECREATE_PACKAGES = "${SRCNAME}-setup ${SRCNAME}-templates ${SRCNAME}-cfn"
 KEYSTONE_HOST="${CONTROLLER_IP}"

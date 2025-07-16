@@ -13,8 +13,6 @@ BPV = "1.8.5"
 PV = "${BPV}"
 SRCREV = "4cf6c6270f52888997ec1b626b9f557db4f26f2e"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/flori/json.git;branch=v1.8;protocol=https \
     "

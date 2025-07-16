@@ -12,6 +12,6 @@ SRC_URI = "https://github.com/barryp/py-amqplib/archive/${PV}.tar.gz"
 SRC_URI[md5sum] = "ff405a7b57aa98cdf07d02bd8090fa29"
 SRC_URI[sha256sum] = "9461d73f75ca704e6b656738b5dad42a1948e61dfbc8233077d84d00f74c3936"
 
-S = "${WORKDIR}/py-amqplib-${PV}"
+S = "${UNPACKDIR}/py-amqplib-${PV}"
 
 inherit setuptools3

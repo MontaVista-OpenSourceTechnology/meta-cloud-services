@@ -17,8 +17,6 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol
 SRCREV = "06af2eb5abe0332f7035a7d7c2fbfd19fbc4dae7"
 PV = "15.0.0+git${SRCPV}"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3 identity default_configs hosts monitor useradd systemd
 
 USER = "glance"
@@ -34,7 +32,6 @@ GLANCE_KNOWN_STORES ?= "glance.store.rbd.Store,\
  glance.store.cinder.Store,\
  glance.store.filesystem.Store,\
  glance.store.http.Store"
-
 
 SERVICECREATE_PACKAGES = "${SRCNAME}-setup"
 KEYSTONE_HOST="${CONTROLLER_IP}"

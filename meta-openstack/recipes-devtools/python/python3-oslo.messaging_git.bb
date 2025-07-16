@@ -9,7 +9,6 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=http
 
 PV = "12.5.0+git${SRCPV}"
 SRCREV = "62e104bdb57714a0754f788795d1b4faf8ebb74d"
-S = "${WORKDIR}/git"
 
 inherit setuptools3
 

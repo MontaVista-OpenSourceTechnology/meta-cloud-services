@@ -10,8 +10,6 @@ SRCREV = "ff61e1577c3aaec6242951876263108559d1a203"
 SRCNAME = "oslo.rootwrap"
 SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=https"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3
 
 # DEPENDS_default: python3-pip

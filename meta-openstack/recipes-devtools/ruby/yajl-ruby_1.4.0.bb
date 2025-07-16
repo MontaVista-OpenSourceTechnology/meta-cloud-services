@@ -8,8 +8,6 @@ SRCREV = "8830754ac1ca04a0c14f71f6e7c1d240934366fe"
 
 SRC_URI = "git://github.com/brianmario/yajl-ruby.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 inherit rubyv2
 
 GEM_NAME = "yajl-ruby"

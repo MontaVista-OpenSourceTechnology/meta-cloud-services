@@ -10,7 +10,6 @@ SRC_URI = "git://github.com/SUSE-Cloud/keystone-hybrid-backend.git;branch=havana
 
 PV="git${SRCPV}"
 SRCREV="0bd376242f8522edef7031d2339b9533b86c17aa"
-S = "${WORKDIR}/git"
 
 inherit python3-dir
 

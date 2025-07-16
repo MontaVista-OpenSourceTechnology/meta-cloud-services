@@ -13,8 +13,6 @@ SRCREV = "959e068fec8b4c956b0d82269336818e667726e7"
 
 SRC_URI = "git://github.com/linsomniac/python-memcached.git;branch=master;protocol=https"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3
 
 RDEPENDS:${PN} += " \

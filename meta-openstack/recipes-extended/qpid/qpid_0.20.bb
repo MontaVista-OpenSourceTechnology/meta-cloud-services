@@ -15,7 +15,7 @@ SRC_URI = "http://archive.apache.org/dist/${PN}/${PV}/qpid-cpp-0.20.tar.gz \
 SRC_URI[md5sum] = "566132c5939ca31a32a0e80cc4124122"
 SRC_URI[sha256sum] = "31b80ba3c4773d288b4e6245e3b2048438386331d460f7a7b0794cbd200301de"
 
-S = "${WORKDIR}/${PN}c-${PV}"
+S = "${UNPACKDIR}/${PN}c-${PV}"
 
 inherit autotools python3-dir perlnative cpan-base update-rc.d pkgconfig
 

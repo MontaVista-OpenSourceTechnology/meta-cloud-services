@@ -10,8 +10,6 @@ SRCREV = "bc631aedef131bc45225720e5c8f8e4ca35ff020"
 SRCNAME = "oslo.reports"
 SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=https"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3
 
 DEPENDS += " \

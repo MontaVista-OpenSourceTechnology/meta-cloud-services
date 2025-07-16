@@ -15,8 +15,6 @@ BPV = "2.0.0.rc1"
 PV = "${BPV}"
 SRCREV = "40eddc184a7b3fe79f9b68f291e06df4c1fbcb0b"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/rest-client/rest-client.git;branch=master;protocol=https \
     "

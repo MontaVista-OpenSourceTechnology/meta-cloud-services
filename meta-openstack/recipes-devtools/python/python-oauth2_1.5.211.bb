@@ -16,7 +16,6 @@ RDEPENDS:${PN} += "python-prettytable \
             python-pep8 \
             python-pyflakes"
 
-
 do_install:append() {
 	perm_files=$(find "${D}${PYTHON_SITEPACKAGES_DIR}/" -name "PKG-INFO")
 	for f in $perm_files; do

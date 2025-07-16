@@ -8,8 +8,6 @@ SRCREV = "5fc278676efde3c85a788fa85ddabddcd91b846f"
 
 SRC_URI = "git://github.com/tzinfo/tzinfo.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 RDEPENDS:${PN} = "concurrent-ruby"
 
 inherit ruby

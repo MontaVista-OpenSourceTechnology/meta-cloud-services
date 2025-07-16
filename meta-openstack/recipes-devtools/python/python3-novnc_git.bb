@@ -11,8 +11,6 @@ PV = "1.3.0"
 SRC_URI = "git://github.com/kanaka/noVNC.git;branch=master;protocol=https \
            file://python-distutils.patch"
 
-S = "${WORKDIR}/git"
-
 inherit setuptools3
 
 DEPENDS += " python3-websockify"

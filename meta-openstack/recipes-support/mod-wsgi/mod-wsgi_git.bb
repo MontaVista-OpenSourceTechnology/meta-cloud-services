@@ -12,8 +12,6 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 SRCREV = "1b645ebd7d87f7a27d23690c19e97dbf8dafe6b4"
 PV = "5.0.2+git${SRCPV}"
 
-S = "${WORKDIR}/git"
-
 SRCNAME = "mod_wsgi"
 SRC_URI = "\
 	git://github.com/GrahamDumpleton/mod_wsgi.git;branch=master;protocol=https \

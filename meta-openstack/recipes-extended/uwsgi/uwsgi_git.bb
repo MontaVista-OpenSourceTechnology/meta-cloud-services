@@ -12,7 +12,6 @@ SRC_URI = "git://github.com/unbit/uwsgi.git;branch=uwsgi-2.0;protocol=https \
 
 SRCREV="af44211739136e22471a2897383f34586284bf86"
 PV="2.0.14+git${SRCPV}"
-S = "${WORKDIR}/git"
 
 inherit setuptools3 pkgconfig
 

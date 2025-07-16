@@ -17,7 +17,6 @@ SRC_URI = "git://github.com/openstack/barbican.git;branch=master;protocol=https 
 
 SRCREV = "e6f05febbe18a86e4e6b05acc5f4868fa3beb291"
 PV = "2015.1.0+git${SRCPV}"
-S = "${WORKDIR}/git"
 
 inherit update-rc.d setuptools3 identity hosts useradd default_configs monitor
 

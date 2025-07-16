@@ -22,7 +22,6 @@ SRC_URI = "git://github.com/stackforge/${SRCNAME}.git;branch=master;protocol=htt
 
 SRCREV="b297cf00750f263b8b5bdeb71f6952f672e87f5a"
 PV="git${SRCPV}"
-S = "${WORKDIR}/git"
 
 inherit setuptools3 update-rc.d hosts identity default_configs
 

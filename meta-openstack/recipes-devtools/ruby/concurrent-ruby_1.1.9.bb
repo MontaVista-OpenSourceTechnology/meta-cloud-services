@@ -9,8 +9,6 @@ SRC_URI = "git://github.com/ruby-concurrency/concurrent-ruby.git;protocol=https;
            "
 SRCREV = "52c08fca13cc3811673ea2f6fdb244a0e42e0ebe"
 
-S = "${WORKDIR}/git"
-
 do_install:append () {
     rmdir --ignore-fail-on-non-empty ${D}${libdir}/ruby/gems/${RUBY_GEM_VERSION}/plugins
 }

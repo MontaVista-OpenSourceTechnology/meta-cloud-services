@@ -9,7 +9,6 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=stable/pike;protocol
 
 PV = "0.4.4+git${SRCPV}"
 SRCREV = "40064ca2d99389f278028508a17f2e38d6df6f10"
-S = "${WORKDIR}/git"
 
 inherit setuptools3
 

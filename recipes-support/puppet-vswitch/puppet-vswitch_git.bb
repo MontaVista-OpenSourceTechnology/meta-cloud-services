@@ -16,8 +16,6 @@ inherit rubyv2
 GEM_NAME = "puppetlabs-std"
 GEM_SPEC_FILE = "puppet-vswitch.gemspec"
 
-S = "${WORKDIR}/git"
-
 DEPENDS += " \
         ruby \
         facter \

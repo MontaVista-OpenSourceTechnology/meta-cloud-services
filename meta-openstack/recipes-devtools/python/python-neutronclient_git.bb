@@ -41,7 +41,6 @@ SRC_URI = "git://github.com/openstack/python-neutronclient.git;branch=stable/pik
 
 PV = "6.5.0+git${SRCPV}"
 SRCREV = "e145c4ef8a0e8390f0468df422a757760e77f823"
-S = "${WORKDIR}/git"
 
 inherit setuptools3 monitor rmargparse
 

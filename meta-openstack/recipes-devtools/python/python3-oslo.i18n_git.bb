@@ -12,8 +12,6 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=http
 
 inherit setuptools3
 
-S = "${WORKDIR}/git"
-
 # DEPENDS_default: python-pip
 
 DEPENDS += " \

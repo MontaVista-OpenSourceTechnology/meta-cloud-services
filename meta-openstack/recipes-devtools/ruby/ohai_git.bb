@@ -17,8 +17,6 @@ BPV = "8.5.0"
 PV = "${BPV}"
 SRCREV = "5c166cf3fa4b2af541ee54855aae73c809044b3d"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/opscode/ohai.git;branch=master;protocol=https \
     "

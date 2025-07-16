@@ -8,8 +8,6 @@ SRCREV = "6bbaa97600430c438675540e1f970d61ce5ccd9e"
 
 SRC_URI = "git://github.com/msgpack/msgpack-ruby.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 inherit rubyv2
 
 GEM_NAME = "msgpack"

@@ -10,7 +10,6 @@ SRC_URI = "git://github.com/apalmblad/ruby-shadow.git;branch=master;protocol=htt
            file://extconf.rb"
 
 SRCREV = "f135b3fd52d0a638f2eb9b17a8952a7f0f317688"
-S = "${WORKDIR}/git"
 
 inherit ruby
 

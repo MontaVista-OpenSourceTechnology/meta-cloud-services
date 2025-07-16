@@ -12,7 +12,6 @@ SRC_URI = "git://github.com/openstack/trove.git;branch=master;protocol=https \
 
 SRCREV="11996635299396f181f5aec3c6825f8011d45e2c"
 PV="4.0.0+git${SRCPV}"
-S = "${WORKDIR}/git"
 
 inherit update-rc.d setuptools3 identity hosts useradd default_configs
 
@@ -59,7 +58,6 @@ do_install:append() {
             sed -e "s:@suffix@:${suffix}:g" -i ${SUFFIX_FILE}
         done
     fi
-
 
     install -d ${D}${localstatedir}/lib/trove
 
@@ -116,9 +114,7 @@ do_install:append() {
                     -i ${TROVE_CONF_DIR}/$file
         done
 
-
     done
-
 
     # Modify api-paste.ini
     sed -e "s:%SERVICE_TENANT_NAME%:${TROVE_TENANT}:g" \
@@ -140,9 +136,7 @@ do_install:append() {
         sed "/^${delete}\(.*\)/d" -i ${TROVE_CONF_DIR}/api-paste.ini
     done
 
-
 }
-
 
 pkg_postinst:${SRCNAME}-setup () {
     # python-trove-setup postinst start
@@ -170,7 +164,6 @@ pkg_postinst:${SRCNAME}-setup () {
 	trove-manage datastore_update "postgresql" "9.1"
     fi
 }
-
 
 USERADD_PACKAGES = "${PN}"
 GROUPADD_PARAM:${PN} = "--system trove"
@@ -230,8 +223,6 @@ FILES:${SRCNAME}-setup = " \
     ${localstatedir}/* \
     ${sysconfdir}/${SRCNAME}/* \
     "
-
-
 
 DEPENDS += " \
     python-pbr \
@@ -314,7 +305,6 @@ RDEPENDS:${SRCNAME}-tests += " \
     python-mock \
     python-pexpect \
     "
-
 
 INITSCRIPT_PACKAGES = "${SRCNAME}-api ${SRCNAME}-conductor ${SRCNAME}-taskmanager"
 

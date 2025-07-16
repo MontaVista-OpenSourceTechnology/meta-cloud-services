@@ -10,7 +10,6 @@ SRC_URI = " \
 
 PV = "0.52.0+git${SRCPV}"
 SRCREV = "e169c495de39a2d97ef1d8bb7894b18e4ef268dd"
-S = "${WORKDIR}/git"
 
 inherit setuptools3
 

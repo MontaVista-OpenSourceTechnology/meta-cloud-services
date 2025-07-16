@@ -21,8 +21,6 @@ PV = "0.1.4"
 SRCREV = "19ade3cf38cc5f5b61fd038f5ce5f4cdb080e9ca"
 SRC_URI = "git://anongit.freedesktop.org/spice/spice-html5;branch=master"
 
-S = "${WORKDIR}/git"
-
 RDEPENDS:${PN} = "python-websockify"
 
 do_install() {

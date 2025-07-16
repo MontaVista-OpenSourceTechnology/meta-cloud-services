@@ -13,4 +13,3 @@ RDEPENDS:${PN} = " \
 
 IMAGE_FEATURES += "package-management"
 
-

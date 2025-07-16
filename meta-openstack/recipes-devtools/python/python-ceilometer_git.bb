@@ -14,10 +14,8 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=http
 # dropped for juno:
 #   file://ceilometer-builtin-tests-config-location.patch
 
-
 SRCREV = "026a5d475e1958bf761e41c2bb426b09e0f3d270"
 PV = "5.0.0+git${SRCPV}"
-S = "${WORKDIR}/git"
 
 CEILOMETER_SECRET ?= "12121212"
 

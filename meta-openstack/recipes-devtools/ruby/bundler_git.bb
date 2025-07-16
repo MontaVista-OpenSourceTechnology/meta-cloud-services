@@ -22,8 +22,6 @@ BPV = "1.6.2"
 PV = "${BPV}"
 SRCREV = "06e3647c117da210ffd15a174624497830addd7b"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/bundler/bundler.git;branch=1-7-stable;protocol=https \
     "

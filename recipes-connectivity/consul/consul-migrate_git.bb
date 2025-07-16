@@ -7,8 +7,6 @@ GO_IMPORT = "github.com/hashicorp/consul-migrate"
 SRC_URI = "https://${GO_IMPORT}.git;branch=master"
 SRCREV = "678fb10cdeae25ab309e99e655148f0bf65f9710"
 
-S = "${WORKDIR}/git"
-
 SRCREV_raft = "057b893fd996696719e98b6c44649ea14968c811"
 SRCREV_go-metrics = "f303b03b91d770a11a39677f1d3b55da4002bbcb"
 SRCREV_raft-boltdb = "d1e82c1ec3f15ee991f7cc7ffd5b67ff6f5bbaee"

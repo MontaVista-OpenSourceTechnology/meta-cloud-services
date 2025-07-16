@@ -11,7 +11,7 @@ SRC_URI = "https://github.com/lathiat/avahi/releases/download/v${PV}/avahi-${PV}
 SRC_URI[md5sum] = "22b5e705d3eabb31d26f2e1e7b074013"
 SRC_URI[sha256sum] = "d54991185d514a0aba54ebeb408d7575b60f5818a772e28fa0e18b98bc1db454"
 
-S = "${WORKDIR}/avahi-${PV}"
+S = "${UNPACKDIR}/avahi-${PV}"
 
 inherit python3native python3-dir
 

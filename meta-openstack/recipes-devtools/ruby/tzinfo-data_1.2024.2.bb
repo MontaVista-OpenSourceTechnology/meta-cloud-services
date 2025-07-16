@@ -8,8 +8,6 @@ SRCREV = "7645b92dccf2c13e3958fedff7b0d105e1c6bb72"
 
 SRC_URI = "git://github.com/tzinfo/tzinfo-data.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 inherit ruby
 
 FILES:${PN} += "${libdir}/*"

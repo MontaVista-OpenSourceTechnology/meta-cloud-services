@@ -8,8 +8,6 @@ SRCREV = "1583aaa510cae4660907b22c8262ab31b1eb1864"
 
 SRC_URI = "git://github.com/nurse/strptime.git;protocol=https;branch=master"
 
-S = "${WORKDIR}/git"
-
 RDEPENDS:${PN} = "bash"
 
 inherit rubyv2

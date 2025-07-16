@@ -36,8 +36,6 @@ SRC_URI += " \
 SRCREV = "b535f0808526c8eba37f15e83cede536e4e06029"
 PV = "16.0.4+git${SRCPV}"
 
-S = "${WORKDIR}/git"
-
 inherit systemd setuptools3 identity hosts useradd default_configs monitor
 
 LIBVIRT_IMAGES_TYPE ?= "default"
@@ -229,7 +227,6 @@ PACKAGECONFIG[bash-completion] = ",,bash-completion,bash-completion python-nova-
 PACKAGES =+ "${BPN}-bash-completion"
 FILES:${BPN}-bash-completion = "${sysconfdir}/bash_completion.d/*"
 
-
 ALLOW_EMPTY:${SRCNAME}-setup = "1"
 ALLOW_EMPTY:${SRCNAME}-ec2 = "1"
 ALLOW_EMPTY:${SRCNAME}-api = "1"
@@ -241,8 +238,6 @@ ALLOW_EMPTY:${SRCNAME}-network = "1"
 ALLOW_EMPTY:${SRCNAME}-novncproxy = "1"
 ALLOW_EMPTY:${SRCNAME}-scheduler = "1"
 ALLOW_EMPTY:${SRCNAME}-spicehtml5proxy = "1"
-
-
 
 FILES:${PN} = "${libdir}/*"
 
@@ -356,7 +351,6 @@ RDEPENDS:${SRCNAME}-tests = " \
                             python-coverage \
                             bash \
                             "
-
 
 SYSTEMD_PACKAGES = " \
     ${SRCNAME}-setup \

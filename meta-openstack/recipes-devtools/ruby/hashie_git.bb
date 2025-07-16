@@ -13,8 +13,6 @@ BPV = "3.4.2"
 PV = "${BPV}"
 SRCREV = "02df8918dd07ef2da1aceba5fd17e8757027345a"
 
-S = "${WORKDIR}/git"
-
 SRC_URI = " \
     git://github.com/intridea/hashie.git;branch=master;protocol=https \
     "

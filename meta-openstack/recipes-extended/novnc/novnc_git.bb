@@ -9,8 +9,6 @@ PV = "1.2.0+git${SRCPV}"
 
 SRC_URI = "git://github.com/kanaka/noVNC.git;branch=master;protocol=https"
 
-S = "${WORKDIR}/git"
-
 do_compile() {
     :
 }
