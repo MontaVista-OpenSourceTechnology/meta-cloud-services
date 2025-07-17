@@ -35,7 +35,7 @@ USERADD_PARAM:${PN} = "--system -m -s /bin/false keystone"
 LDAP_DN ?= "dc=my-domain,dc=com"
 
 SERVICECREATE_PACKAGES = "${SRCNAME}-setup"
-KEYSTONE_HOST="${CONTROLLER_IP}"
+KEYSTONE_HOST = "${CONTROLLER_IP}"
 
 # USERCREATE_PARAM and SERVICECREATE_PARAM contain the list of parameters to be
 # set.  If the flag for a parameter in the list is not set here, the default

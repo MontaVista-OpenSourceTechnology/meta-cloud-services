@@ -51,7 +51,7 @@ USERADD_PARAM:${PN} = "--system -m -d ${localstatedir}/lib/nova -s /bin/false -g
 PLACEMENT_USER = "placement"
 
 SERVICECREATE_PACKAGES = "${SRCNAME}-setup ${SRCNAME}-ec2"
-KEYSTONE_HOST="${CONTROLLER_IP}"
+KEYSTONE_HOST = "${CONTROLLER_IP}"
 
 # USERCREATE_PARAM and SERVICECREATE_PARAM contain the list of parameters to be set.
 # If the flag for a parameter in the list is not set here, the default value will be given to that parameter.

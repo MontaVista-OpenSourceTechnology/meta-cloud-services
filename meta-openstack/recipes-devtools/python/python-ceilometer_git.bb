@@ -20,7 +20,7 @@ PV = "5.0.0+git${SRCPV}"
 CEILOMETER_SECRET ?= "12121212"
 
 SERVICECREATE_PACKAGES = "${SRCNAME}-setup ${SRCNAME}-reseller"
-KEYSTONE_HOST="${CONTROLLER_IP}"
+KEYSTONE_HOST = "${CONTROLLER_IP}"
 
 # USERCREATE_PARAM and SERVICECREATE_PARAM contain the list of parameters to be set.
 # If the flag for a parameter in the list is not set here, the default value will be given to that parameter.

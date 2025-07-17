@@ -8,8 +8,8 @@ SRC_URI = "\
 	git://git.openstack.org/openstack/neutron-lib.git;branch=stable/pike \
 	"
 
-PV="1.9.1+git${SRCPV}"
-SRCREV="f0d7e470c2ef1702b2715ceb2fd8a00fce2a23be"
+PV = "1.9.1+git${SRCPV}"
+SRCREV = "f0d7e470c2ef1702b2715ceb2fd8a00fce2a23be"
 
 inherit setuptools3
 

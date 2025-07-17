@@ -8,8 +8,8 @@ SRC_URI = "\
 	git://git.openstack.org/openstack/glance_store.git;branch=stable/pike \
 	"
 
-PV="0.22.0+git${SRCPV}"
-SRCREV="49c915f498fc8d91c98fcf4e07ceecdcf167fc5a"
+PV = "0.22.0+git${SRCPV}"
+SRCREV = "49c915f498fc8d91c98fcf4e07ceecdcf167fc5a"
 
 inherit setuptools3
 

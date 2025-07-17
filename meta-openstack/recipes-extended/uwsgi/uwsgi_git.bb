@@ -10,8 +10,8 @@ SRC_URI = "git://github.com/unbit/uwsgi.git;branch=uwsgi-2.0;protocol=https \
     file://more-Add-explicit-breaks-to-avoid-implicit-passthrough.patch \
 "
 
-SRCREV="af44211739136e22471a2897383f34586284bf86"
-PV="2.0.14+git${SRCPV}"
+SRCREV = "af44211739136e22471a2897383f34586284bf86"
+PV = "2.0.14+git${SRCPV}"
 
 inherit setuptools3 pkgconfig
 

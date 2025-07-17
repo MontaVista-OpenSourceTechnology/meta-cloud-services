@@ -14,11 +14,11 @@ SRC_URI = "git://github.com/openstack/${SRCNAME}.git;branch=master;protocol=http
            file://logging.conf \
 "
 
-SRCREV="2707a0f065e52d8331d12c983ead95de1224cb32"
-PV="2014.1+git${SRCPV}"
+SRCREV = "2707a0f065e52d8331d12c983ead95de1224cb32"
+PV = "2014.1+git${SRCPV}"
 
 SERVICECREATE_PACKAGES = "${SRCNAME}-setup ${SRCNAME}-setup-altdemo ${SRCNAME}-setup-admin"
-KEYSTONE_HOST="${CONTROLLER_IP}"
+KEYSTONE_HOST = "${CONTROLLER_IP}"
 
 # USERCREATE_PARAM and SERVICECREATE_PARAM contain the list of parameters to be set.
 # If the flag for a parameter in the list is not set here, the default value will be given to that parameter.

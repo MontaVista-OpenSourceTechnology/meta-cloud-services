@@ -8,8 +8,8 @@ SRC_URI = "\
 	git://git.openstack.org/openstack/taskflow.git;branch=stable/pike \
 	"
 
-PV="2.14.1+git${SRCPV}"
-SRCREV="ed867c4fd17e4102a133c313a13af37baccf14a4"
+PV = "2.14.1+git${SRCPV}"
+SRCREV = "ed867c4fd17e4102a133c313a13af37baccf14a4"
 
 inherit setuptools3
 

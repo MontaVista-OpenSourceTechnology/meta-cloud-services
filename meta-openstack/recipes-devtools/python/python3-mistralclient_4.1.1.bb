@@ -18,7 +18,7 @@ DEPENDS += " \
         python3-pbr-native \
         "
 
-RDEPENDS:${PN} +=" \
+RDEPENDS:${PN} += " \
         python3-cliff \
         python3-pbr \
         python3-keystoneclient \

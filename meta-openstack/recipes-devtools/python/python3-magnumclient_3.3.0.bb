@@ -16,7 +16,7 @@ DEPENDS += " \
         python3-pbr-native \
         "
 
-RDEPENDS:${PN} +=" \
+RDEPENDS:${PN} += " \
         python3-pbr \
         python3-babel \
         python3-oslo.config \

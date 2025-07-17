@@ -20,8 +20,8 @@ SRC_URI = "git://github.com/stackforge/${SRCNAME}.git;branch=master;protocol=htt
            file://verification-subunit2json-fail-to-open-result-file.patch \
 "
 
-SRCREV="b297cf00750f263b8b5bdeb71f6952f672e87f5a"
-PV="git${SRCPV}"
+SRCREV = "b297cf00750f263b8b5bdeb71f6952f672e87f5a"
+PV = "git${SRCPV}"
 
 inherit setuptools3 update-rc.d hosts identity default_configs
 

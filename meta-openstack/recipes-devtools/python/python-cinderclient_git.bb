@@ -12,8 +12,8 @@ SRC_URI = "\
 	file://cinder-api-check.sh \
 	"
 
-PV="3.1.0+git${SRCPV}"
-SRCREV="3640aeab6e11987288a2f149fbeedb1c026045e2"
+PV = "3.1.0+git${SRCPV}"
+SRCREV = "3640aeab6e11987288a2f149fbeedb1c026045e2"
 
 inherit setuptools3 monitor
 

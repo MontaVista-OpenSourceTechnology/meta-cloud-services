@@ -10,13 +10,13 @@ SRC_URI = "git://github.com/openstack/trove.git;branch=master;protocol=https \
           file://trove-init \
           "
 
-SRCREV="11996635299396f181f5aec3c6825f8011d45e2c"
-PV="4.0.0+git${SRCPV}"
+SRCREV = "11996635299396f181f5aec3c6825f8011d45e2c"
+PV = "4.0.0+git${SRCPV}"
 
 inherit update-rc.d setuptools3 identity hosts useradd default_configs
 
 SERVICECREATE_PACKAGES = "${SRCNAME}-setup"
-KEYSTONE_HOST="${CONTROLLER_IP}"
+KEYSTONE_HOST = "${CONTROLLER_IP}"
 
 # USERCREATE_PARAM and SERVICECREATE_PARAM contain the list of parameters to be
 # set.  If the flag for a parameter in the list is not set here, the default
