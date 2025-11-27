@@ -21,6 +21,8 @@ SRC_URI = "\
 	file://nslcd.service \
 	"
 
+UPSTREAM_CHECK_URI = "https://arthurdejong.org/nss-pam-ldapd/downloads"
+
 inherit autotools features_check
 REQUIRED_DISTRO_FEATURES = "pam"
 
