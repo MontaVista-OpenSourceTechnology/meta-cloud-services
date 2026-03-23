@@ -26,8 +26,7 @@ UPSTREAM_CHECK_URI = "https://arthurdejong.org/nss-pam-ldapd/downloads"
 inherit autotools features_check
 REQUIRED_DISTRO_FEATURES = "pam"
 
-SRC_URI[md5sum] = "cc30ee0ab91d6c94b7a343ae09b5dc69"
-SRC_URI[sha256sum] = "c6d661e74693cbf531a790631ca93b73f291fb23cc39465b09deb8da2bfb0e14"
+SRC_URI[sha256sum] = "e01784e17cb533bb66bd0601e205e785263445c3c2df7a6f90232ab4131c716d"
 
 DEPENDS += "libpam openldap krb5"
 EXTRA_OEMAKE += "CC='${CC} -std=c99 '"
