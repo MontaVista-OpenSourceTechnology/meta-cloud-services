@@ -7,8 +7,8 @@ SRC_URI = " \
     http://downloads.puppetlabs.com/facter/facter-${PV}.tar.gz \
     file://facter.gemspec \
 "
-SRC_URI[md5sum] = "676406153803d3d79d3d7149280a4bcd"
-SRC_URI[sha256sum] = "2cacccc9d7745953014bffe3b2f46468b5022026765751519d2659551aa55dc8"
+SRC_URI[md5sum] = "e2d0f3c6307b54ffbf2cc018d11f2fb2"
+SRC_URI[sha256sum] = "8da6ceccafc945ac529051b19fa21fca9a20092545b00fbff5c14923e0324d79"
 
 inherit ruby
 
