@@ -12,7 +12,7 @@ LICENSE = "BSD-3-Clause"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=7e5ded7363d335e1bb18013ca08046ff"
 
-inherit autotools systemd
+inherit autotools pkgconfig systemd
 
 DEPENDS += "libevent"
 RDEPENDS:${PN} += "\
@@ -28,8 +28,8 @@ SRC_URI = "http://www.memcached.org/files/${BP}.tar.gz \
            file://memcached-config.txt \
            "
 
-SRC_URI[md5sum] = "263819baf411388b3f72700a3212d4e2"
-SRC_URI[sha256sum] = "258cc3ddb7613685465acfd0215f827220a3bbdd167fd2c080632105b2d2f3ce"
+SRC_URI[md5sum] = "a9eb0848f052a5c0d18b4a314807dd5c"
+SRC_URI[sha256sum] = "e097073c156eeff9e12655b054f446d57374cfba5c132dcdbe7fac64e728286a"
 
 # set the same COMPATIBLE_HOST as libhugetlbfs
 COMPATIBLE_HOST = '(i.86|x86_64|powerpc|powerpc64|arm).*-linux'
@@ -61,7 +61,7 @@ do_install:append() {
     install -m 755 ${S}/scripts/start-memcached ${D}/usr/share/memcached/scripts
 
     install -d ${D}/${sysconfdir}/default
-    install -m 600 ${WORKDIR}/memcached-config.txt ${D}/${sysconfdir}/default/memcached
+    install -m 600 ${UNPACKDIR}/memcached-config.txt ${D}/${sysconfdir}/default/memcached
 
     install -d ${D}/${systemd_system_unitdir}
     install -m 644 ${S}/scripts/memcached.service ${D}/${systemd_system_unitdir}/.
