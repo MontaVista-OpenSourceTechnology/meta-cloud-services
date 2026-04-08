@@ -23,7 +23,6 @@ DEPENDS += " \
 RDEPENDS:${PN} += " \
         ruby \
         facter \
-        ruby-shadow \
         bash \
 "
 
