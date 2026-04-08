@@ -6,7 +6,9 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=07d6218b18fb6826f04fd32b4918f085"
 
 SRCREV = "57570f04456560512e4efc1c6fa695b76c17dc0d"
 
-SRC_URI = "git://github.com/frsyuki/sigdump.git;protocol=https;branch=master"
+SRC_URI = "git://github.com/frsyuki/sigdump.git;protocol=https;branch=master \
+           file://0001-gemspec-remove-has_rdoc-for-Ruby-4.0.patch \
+           "
 
 inherit ruby
 

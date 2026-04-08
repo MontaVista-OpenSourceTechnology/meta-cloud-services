@@ -1,0 +1,23 @@
+From: Bruce Ashfield <bruce.ashfield@gmail.com>
+Subject: [PATCH] gemspec: remove has_rdoc for Ruby 4.0
+
+has_rdoc= was removed from Gem::Specification in Ruby 4.0.
+It was a no-op since RubyGems 2.0.
+
+Upstream-Status: Pending
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ sigdump.gemspec | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/sigdump.gemspec b/sigdump.gemspec
+--- a/sigdump.gemspec
++++ b/sigdump.gemspec
+@@ -11,7 +11,6 @@
+   gem.authors     = ["Sadayuki Furuhashi"]
+   gem.email       = ["frsyuki@gmail.com"]
+   gem.license     = "MIT"
+-  gem.has_rdoc    = false
+   gem.files       = `git ls-files`.split("\n")
+   gem.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+   gem.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
