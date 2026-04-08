@@ -10,8 +10,8 @@ SRC_URI = " \
     file://puppet.init \
     file://puppet.service \
 "
-SRC_URI[md5sum] = "82276f0f2547db525af87bf42cf9284f"
-SRC_URI[sha256sum] = "a42c691f460eeccdadb175fa7430aa6e366782b2881af9e4b4c8e6e621d7607d"
+SRC_URI[md5sum] = "f2b6dc146b0e2eff99735735b889998b"
+SRC_URI[sha256sum] = "35883253c172cbb59d4fe5b9aad28beb2d48a2898c58f2ed25c7923f3a82d3ad"
 
 inherit ruby update-rc.d systemd
 
