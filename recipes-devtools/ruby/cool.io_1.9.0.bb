@@ -8,8 +8,6 @@ SRCREV = "6f85a2a104488e5c7cb128b9a83058d28ba16d37"
 
 SRC_URI = 'git://github.com/tarcieri/cool.io.git;protocol=https;branch=main'
 
-S = '${WORKDIR}/git'
-
 inherit rubyv2
 
 GEM_NAME = "cool.io"

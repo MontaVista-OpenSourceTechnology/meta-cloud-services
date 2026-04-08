@@ -8,8 +8,6 @@ SRCREV = '99d44a0989ab3e64e14ac0367aadf76aa13b3583'
 
 SRC_URI = 'git://github.com/treasure-data/serverengine.git;protocol=https;branch=master'
 
-S = '${WORKDIR}/git'
-
 RDEPENDS:${PN} = "sigdump"
 
 inherit ruby
