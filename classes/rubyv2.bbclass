@@ -99,7 +99,7 @@ do_gem_unpack() {
     gem unpack -V ${GEM_FILE}
 }
 
-DEPENDS:append = " ruby-native ${EXTRA_DEPENDS}"
+DEPENDS:append = " ruby-native chrpath-native ${EXTRA_DEPENDS}"
 DEPENDS:append:class-target = " ruby ruby-native ${EXTRA_DEPENDS}"
 
 python () {
@@ -235,6 +235,8 @@ rubyv2_do_compile() {
 }
 
 python do_rubyv2_fix_libs() {
+    import subprocess
+
     # as ruby dynloader expects the shared .so files
     # without extension we will create symlinks to the
     # properly versioned file
@@ -248,6 +250,19 @@ python do_rubyv2_fix_libs() {
                     except:
                         pass
                     _filename, _ = os.path.splitext(_filename)
+
+    # Strip native sysroot RPATHs from installed shared objects
+    for root, dirs, files in os.walk(d.expand("${GEM_HOME}")):
+        for f in files:
+            if f.endswith(".so"):
+                fpath = os.path.join(root, f)
+                if os.path.islink(fpath):
+                    continue
+                try:
+                    subprocess.check_call(["chrpath", "-d", fpath],
+                                          stderr=subprocess.DEVNULL)
+                except (subprocess.CalledProcessError, FileNotFoundError):
+                    pass
 }
 
 RUBY_INSTALL_EXTRA_FLAGS ?= ""
