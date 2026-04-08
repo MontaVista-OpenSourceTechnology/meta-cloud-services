@@ -3,8 +3,8 @@ HOMEPAGE = "https://github.com/puppetlabs/puppetlabs-stdlib"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-PV = "v9.6.0"
-SRCREV = "99aebdd57d665ac7e2ba38ab95f3fbdbc2fb56e0"
+PV = "v9.7.0"
+SRCREV = "52740b7c3570b1828ed78c02a566b92a8c2b7329"
 
 SRC_URI = " \
     git://github.com/puppetlabs/puppetlabs-stdlib.git;branch=main;protocol=https \
