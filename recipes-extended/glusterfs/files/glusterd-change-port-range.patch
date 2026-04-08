@@ -25,13 +25,13 @@ Signed-off-by: Yi Zhao <yi.zhao@windriver.com>
 [Hogzhi: modify patch for release-6.1]
 Signed-off-by: Hongzhi.Song <hongzhi.song@windriver.com>
 ---
- extras/glusterd.vol | 2 +-
+ extras/glusterd.vol.in | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/extras/glusterd.vol b/extras/glusterd.vol
+diff --git a/extras/glusterd.vol.in b/extras/glusterd.vol.in
 index 6045591..d814b5f 100644
---- a/extras/glusterd.vol
-+++ b/extras/glusterd.vol
+--- a/extras/glusterd.vol.in
++++ b/extras/glusterd.vol.in
 @@ -11,6 +11,6 @@ volume management
      option event-threads 1
  #   option lock-timer 180
