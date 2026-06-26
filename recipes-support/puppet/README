@@ -16,7 +16,7 @@ The json gem (any modern version)
     Over time, it became a requirement and was even included in the
     puppet-agent package, but it was limited by its original design.
 
-    https://puppet.com/docs/puppet/4.10/hiera_intro.html
+    https://help.puppet.com/core/current/Content/PuppetCore/hiera_intro.htm
 
 Simple Demo
 ------------------------

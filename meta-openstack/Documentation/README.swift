@@ -428,5 +428,5 @@ References
 ==========
 
 * http://docs.openstack.org/developer/swift/deployment_guide.html
-* http://docs.openstack.org/grizzly/openstack-compute/install/yum/content/ch_installing-openstack-object-storage.html
-* https://swiftstack.com/openstack-swift/architecture/
+* https://docs.openstack.org/swift/rocky/install/index.html
+* https://docs.openstack.org/swift/latest/install/index.html

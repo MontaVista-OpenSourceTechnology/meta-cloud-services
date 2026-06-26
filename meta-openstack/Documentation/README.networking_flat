@@ -246,4 +246,4 @@ root@compute:~# ovs-vsctl show
 
 References
 ----------
-http://developer.rackspace.com/blog/neutron-networking-simple-flat-network.html
+http://docs.openstack.org/neutron/latest/admin/intro-basic-networking.html

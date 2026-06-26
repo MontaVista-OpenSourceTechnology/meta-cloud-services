@@ -379,4 +379,4 @@ root@compute:~# ovs-vsctl show
 
 References
 ----------
-http://developer.rackspace.com/blog/neutron-networking-vlan-provider-networks.html
+http://docs.openstack.org/neutron/latest/admin/intro-basic-networking.html
