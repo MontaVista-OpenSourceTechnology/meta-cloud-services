@@ -1,7 +1,15 @@
 SUMMARY = "Provides data migration for Consul server nodes"
 HOMEPAGE = "https://github.com/hashicorp/consul-migrate"
-LICENSE = "BSD & MPL-2.0 & MIT"
+LICENSE = "MIT AND MPL-2.0 AND LicenseRef-BSD"
 LIC_FILES_CHKSUM = "file://src/github.com/hashicorp/consul-migrate/LICENSE;md5=b278a92d2c1509760384428817710378"
+
+# The vendored code aggregates BSD-flavoured content that OE-core's
+# common-licenses no longer covers by a bare "BSD" alias. Point the
+# LicenseRef at the in-source LICENSE file (which is MPL-2.0 for the
+# top-level project but ships alongside the vendored notices). A finer
+# audit of the vendor/ tree to replace this with the specific SPDX
+# variants (BSD-2-Clause / BSD-3-Clause / ISC / …) is a follow-up.
+NO_GENERIC_LICENSE[BSD] = "src/github.com/hashicorp/consul-migrate/LICENSE"
 
 GO_IMPORT = "github.com/hashicorp/consul-migrate"
 SRC_URI = "https://${GO_IMPORT}.git;branch=master"
