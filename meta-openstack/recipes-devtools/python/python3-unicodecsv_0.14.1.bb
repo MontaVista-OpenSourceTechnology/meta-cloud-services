@@ -1,7 +1,7 @@
 SUMMARY = "Python2's stdlib csv module replacement with unicode support"
 HOMEPAGE = "https://github.com/jdunck/python-unicodecsv"
 SECTION = "devel/python"
-LICENSE = "BSD"
+LICENSE = "BSD-3-Clause"
 
 LIC_FILES_CHKSUM = "file://PKG-INFO;md5=776dee90d219355b4ffd5c06fda5a39d"
 

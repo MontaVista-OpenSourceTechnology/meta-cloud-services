@@ -1,7 +1,7 @@
 DESCRIPTION = "Tools for using Babel with Django"
 HOMEPAGE = "https://github.com/python-babel/django-babel"
 SECTION = "devel/python"
-LICENSE = "BSD"
+LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://COPYING;md5=5ae97ab65116b8d7890c59de57577b46"
 
 inherit setuptools3 pypi
