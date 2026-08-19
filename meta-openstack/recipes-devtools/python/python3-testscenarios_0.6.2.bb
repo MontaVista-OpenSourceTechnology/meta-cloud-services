@@ -1,16 +1,17 @@
 DESCRIPTION = "testscenarios: a pyunit extension for dependency injection"
 HOMEPAGE = "https://pypi.python.org/pypi/testscenarios"
 SECTION = "devel/python"
-LICENSE = "BSD"
-LIC_FILES_CHKSUM = "file://BSD;md5=0805e4f024d089a52dca0671a65b8b66"
+LICENSE = "Apache-2.0 OR BSD-3-Clause"
+LIC_FILES_CHKSUM = "file://BSD;md5=0805e4f024d089a52dca0671a65b8b66 \
+                    file://Apache-2.0;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI[md5sum] = "859073d9e7b049aee2e6704c51f6001a"
-SRC_URI[sha256sum] = "c257cb6b90ea7e6f8fef3158121d430543412c9a87df30b5dde6ec8b9b57a2b6"
+SRC_URI[sha256sum] = "ab5ae8cd550e11ea978151981e7a8ecac329b7b22e4dec706b1e6fe213f463e7"
 
-inherit setuptools3 pypi
+inherit python_hatchling pypi
 
 DEPENDS += "\
     ${PYTHON_PN}-pbr \
+    ${PYTHON_PN}-hatch-vcs-native \
     "
 
 # Satisfy setup.py 'setup_requires'
