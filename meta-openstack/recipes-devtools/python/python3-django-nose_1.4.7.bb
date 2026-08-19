@@ -4,7 +4,7 @@
 DESCRIPTION = "Django test runner using nose"
 HOMEPAGE = "https://github.com/django-nose/django-nose"
 SECTION = "devel/python"
-LICENSE = "BSD"
+LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=7f88f52f66738ec7259424ce46e855c2"
 
 SRC_URI[md5sum] = "fe386c6e218b0f7b353494329c380a79"
@@ -18,7 +18,7 @@ DEPENDS += " \
 
 RDEPENDS:${PN} += " \
         python3-django \
-        python3-nose \
+        python3-nose-exclude \
         python3-misc \
         "
 

@@ -15,8 +15,3 @@ inherit setuptools3 pypi
 DEPENDS += " \
         python3-pip \
         "
-
-RDEPENDS:${PN} += " \
-        python3-nose \
-        "
-
