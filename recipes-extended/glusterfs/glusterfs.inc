@@ -23,7 +23,7 @@ SRC_URI += "file://glusterd.init \
             file://0001-configure-pass-SSL_CERTS.-Don-t-discover-it.patch \
            "
 
-LICENSE = "(LGPL-3.0-or-later | GPL-2.0-only) & GPL-3.0-or-later & LGPL-3.0-or-later & GPL-2.0-or-later & LGPL-2.0-or-later & LGPL-2.1-or-later & Apache-2.0"
+LICENSE = "Apache-2.0 AND GPL-2.0-or-later AND GPL-3.0-or-later AND LGPL-2.0-or-later AND LGPL-2.1-or-later AND LGPL-3.0-or-later AND (GPL-2.0-only OR LGPL-3.0-or-later)"
 LIC_FILES_CHKSUM = "file://COPYING-GPLV2;md5=b234ee4d69f5fce4486a80fdaf4a4263 \
                     file://COPYING-LGPLV3;md5=e6a600fd5e1d9cbde2d983680233ad02 \
                     file://contrib/fuse-util/COPYING;md5=94d55d512a9ba36caa9b7df079bae19f"
