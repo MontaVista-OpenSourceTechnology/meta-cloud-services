@@ -11,7 +11,7 @@ of failure."
 HOMEPAGE = "https://www.serf.io/"
 SECTION = "network"
 
-LICENSE = "Apache-2.0 AND BSD-3-Clause AND MIT AND MPL-2.0"
+LICENSE = "Apache-2.0 & BSD-3-Clause & MIT & MPL-2.0"
 LIC_FILES_CHKSUM = "file://src/${GO_IMPORT}/LICENSE;md5=b278a92d2c1509760384428817710378"
 
 require serf-vendor-licenses.inc
