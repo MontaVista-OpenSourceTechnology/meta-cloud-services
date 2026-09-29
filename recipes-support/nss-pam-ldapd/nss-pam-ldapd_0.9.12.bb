@@ -41,6 +41,9 @@ FILES:${PN} += "${base_libdir}/security ${datadir}"
 FILES:${PN}-dbg += "${base_libdir}/security/.debug"
 
 LDAP_DN ?= "dc=my-domain,dc=com"
+do_install:prepend() {
+   export PYTHONDONTWRITEBYTECODE=1
+}
 
 do_install:append() {
 	install -D -m 0755 ${WORKDIR}/nslcd.init ${D}${sysconfdir}/init.d/nslcd
